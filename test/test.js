@@ -1,4 +1,4 @@
-const inflectors = require("../inflectors.js").inflectors;
+const inflectors = require("../inflectors.js");
 const assert = require("assert");
 
 describe('singularization & pluralization', function () {
