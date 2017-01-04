@@ -41,7 +41,7 @@ const inflectors = {
 	 * @return {Boolean}     result
 	**/
 	isSingular:function(str){
-		str = (str||"").split("-")[0].toLowerCase().trim();
+		str = (str||"").split(/\W/)[0].toLowerCase().trim();
 		// uncountable?
 		if(inflectors.isUncountable(str)) return false;
 		// Has an exception?
