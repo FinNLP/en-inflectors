@@ -1,11 +1,27 @@
 # English Inflectors Library
 For noun (plural to singular and singular to plural) and verb (gerund, present & past) transformations.
 
-## Installation and Usage
+### How accurate is it?
+
+First of all, unless you have a dictionary of all the words and verbs there are in the English you can't really write a regular expression or an algorithm and expect to have a 100% success rate. English has been adopting words form a lot of different languages (French, Greek and Latin for example) and each one these languages has it's own rules of pluralization and singularization.
+
+Even with dictionaries you'll have the problem of complex and made up words like `geo-location`, and you might have to add dictionaries for specialties (like medicine which does actually have it's own dictionary). 
+
+However, I think what you'll find in this library is what can be achieved with the least amount of compromise.
+
+I've used a set of rules (for detection/transformation) in combination with an exceptions list.
+
+However, testing the library was more challenging than what I was anticipating. If you have any case inaccuracy or false positives **please** submit an issue.
+
+And of course, You can clone this repository, install `mocha` and test it for yourself, and you'll see how it passes the 9508 tests successfully.
+
+
+## Installation
 
 ```
 npm install en-inflectors --save
 ```
+
 
 ## Plural and singular detection
 
