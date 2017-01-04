@@ -2,7 +2,14 @@ const rules = require("./rules/transformation.js");
 const detect = require("./rules/detection.js");
 const pluralExceptions = require("./lists/plurals_exceptions.js");
 const uncountableWords = require("./lists/uncountable_words.js");
-
+const verbs = require("./lists/verbs.js");
+const verbsTable = verbs.filter((x)=>Array.isArray(x));
+const infinitives = verbs.map((x)=>{
+	if(Array.isArray(x)) return x[0];
+	else return x;
+});
+const conjugate = require("./conjugation_methods.js");
+const porterStemmer = require("en-stemmer");
 
 
 // This is a helper method that applies rules based replacement to a String.
@@ -26,16 +33,6 @@ function findTheException(str,type){
 }
 
 
-const verbs = require("./lists/verbs.js");
-const verbsTable = verbs.filter((x)=>Array.isArray(x));
-const infinitives = verbs.map((x)=>{
-	if(Array.isArray(x)) return x[0];
-	else return x;
-});
-const conjugate = require("./conjugation_methods.js");
-const porterStemmer = require("en-stemmer");
-
-
 const inflectors = {
 
 	/**
@@ -48,15 +45,11 @@ const inflectors = {
 		// uncountable?
 		if(inflectors.isUncountable(str)) return true;
 		// Has an exception?
-		var hasExceptionAsSingular = findTheException(str,"s");
-		if(hasExceptionAsSingular) return true;
-		var hasExceptionAsPlural = findTheException(str,"p");
-		if(hasExceptionAsPlural) return false;
+		if(findTheException(str,"s")) return true;
+		if(findTheException(str,"p")) return false;
 		// detect against the RegExp detection rules
-		var singularApplicableRule = detect.singular.find((rule)=>rule.test(str));
-		if(singularApplicableRule) return true;
-		var pluralApplicableRule = detect.plural.find((rule)=>rule.test(str));
-		if(pluralApplicableRule) return false;
+		if(detect.singular.find((rule)=>rule.test(str))) return true;
+		if(detect.plural.find((rule)=>rule.test(str))) return false;
 		return true;
 	},
 
@@ -74,10 +67,8 @@ const inflectors = {
 		if(findTheException(str,"p")) return true;
 		if(findTheException(str,"s")) return false;
 		// detect against the RegExp detection rules
-		var pluralApplicableRule = detect.plural.find((rule)=>str.match(rule));
-		if(pluralApplicableRule) return true;
-		var singularApplicableRule = detect.singular.find((rule)=>str.match(rule));
-		if(singularApplicableRule) return false;
+		if(detect.plural.find((rule)=>str.match(rule))) return true;
+		if(detect.singular.find((rule)=>str.match(rule))) return false;
 		return true;
 	},
 
@@ -151,6 +142,10 @@ const inflectors = {
 	infinitive:(vb) => inflectors.present(vb), // ^ alias
 	gerund:(vb)=> inflectors.conjugate(vb, "VBG"),
 
+	uncountableWords,
+	verbs,
+	verbsTable,
+	infinitives
 };
 
 
@@ -275,9 +270,4 @@ function stemmer(vb){
 	return porterStemmer(vb);
 }
 
-
-module.exports.inflectors = inflectors;
-module.exports.uncountableWords = uncountableWords;
-module.exports.verb = verbs;
-module.exports.verbsTable = verbsTable;
-module.exports.infinitives = infinitives;
+module.exports = inflectors;
