@@ -9,7 +9,7 @@ npm install en-inflectors --save
 
 ## Plural and singular detection
 
-```
+```javascript
 const inflectors = require("en-inflectors");
 inflectors.isSingular("nuclei");
 // > false
@@ -28,7 +28,7 @@ inflectors.isCountable("steam");
 
 ## Plural to singular transformation
 
-```
+```javascript
 const inflectors = require("en-inflectors");
 inflectors.pluralize("mouse");
 // > mice
@@ -39,7 +39,7 @@ inflectors.pluralize("river");
 ```
 
 ## Singular to plural transformation
-```
+```javascript
 const inflectors = require("en-inflectors");
 inflectors.pluralize("location");
 // > locations
@@ -57,7 +57,7 @@ inflectors.pluralize("wharf");
 
 ## Verb conjugation
 
-```
+```javascript
 const inflectors = require("en-inflectors");
 inflectors.conjugate("playing","VBP");
 // > play
@@ -81,7 +81,7 @@ where:
 
 Or you can use the aliases:
 
-```
+```javascript
 const inflectors = require("en-inflectors");
 inflectors.present("playing");
 // > play
