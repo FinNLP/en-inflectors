@@ -59,17 +59,9 @@ const inflectors = {
 	 * @param  {String} str input
 	 * @return {Boolean}     result
 	**/
-	isPlural:function(str){
-		str = (str||"").split("-")[0].toLowerCase().trim();
+	isPlural:function(str,strict){
+		str = (str||"").split(/\W/)[0].toLowerCase().trim();
 		// uncountable?
-		if(inflectors.isUncountable(str)) return true;
-		// Has an exception?
-		if(findTheException(str,"p")) return true;
-		if(findTheException(str,"s")) return false;
-		// detect against the RegExp detection rules
-		if(detect.plural.find((rule)=>str.match(rule))) return true;
-		if(detect.singular.find((rule)=>str.match(rule))) return false;
-		return true;
 		if(inflectors.isUncountable(str)) return false;
 		return !inflectors.isSingular(str);
 	},
@@ -97,9 +89,11 @@ const inflectors = {
 
 
 	/**
+	 * 
 	 * Pluralize the input
 	 * @param  {String} str
 	 * @return {String}
+	 * 
 	**/
 	pluralize: function(str){
 		if(inflectors.isPlural(str)) return str;
