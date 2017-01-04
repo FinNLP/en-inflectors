@@ -6,7 +6,11 @@ module.exports.singular = [
 	/thos$/,
 	/pus$/,
 	/tis$/,
-	/^[a-z][a-z]s$/,
+	/^[a-z]{1}s$/,
+	/us$/,
+	/(n|r)is$/,
+	/tmas$/,
+
 	// letter A
 	/[abefgjklpqywxyz]a$/,
 	/[^i]ca$/,
@@ -26,6 +30,8 @@ module.exports.singular = [
 	/[^rmpe][a-z]ta$/,
 	/[^gart][a-z][a-z]ta$/,
 	// Letter E
+	/(a)e$/,
+	/people$/,
 	/[^t][^t][^o][^i][^a]e$/,
 	// Letter H
 	/[^i][^t]h$/,
@@ -38,7 +44,6 @@ module.exports.singular = [
 	// Letter N
 	/[^e]n$/,
 ];
-
 module.exports.plural = [
 	/men$/,
 	/sortia$/,
@@ -56,8 +61,10 @@ module.exports.plural = [
 	/ves$/,
 	/es$/,
 	/[aouiey]ys$/,
+	/oos$/,
+	/ios$/,
 	/[tfg]ee[sth]{1,2}e*$/,
-	/[^aouie][aoui]s$/,
+	/[^aouies][aoui]s$/,
 	/[ea]s$/,
 	/[^aouie]s$/,
 ];
