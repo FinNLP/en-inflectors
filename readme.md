@@ -40,7 +40,7 @@ inflectors.isCountable("steam");
 - Search for the given word against a dictionary of known and common exceptions.
 - Detect the given word against a set of RegExp rules.
 
-> Note: All uncountable words like **sheep**, **deer**, **tuna** and **steam** will return `true` for both plural and singular detection.
+> Note: All uncountable words like **sheep**, **deer**, **tuna** and **steam** will return `false` for both plural and singular detection.
 
 ## Plural to singular transformation
 
