@@ -1,0 +1,23 @@
+{
+  "name": "en-inflectors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "inflectors.js",
+  "dependencies": {
+    "en-stemmer": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexcorvi/en-inflectors.git"
+  },
+  "author": "Alex Corvi <alex@arrayy.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexcorvi/en-inflectors/issues"
+  },
+  "homepage": "https://github.com/alexcorvi/en-inflector#readme"
+}
