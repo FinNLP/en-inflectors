@@ -245,6 +245,9 @@ module.exports = {
     "amoeba": ["amoebae"],
     "larva": ["larvae"],
     "barracks": ["barracks"],
+    "gas": ["gases"],
+    "ass": ["asses"],
+    "des": ["deses"],
     "gallows": ["gallows"],
     "aircraft": ["aircraft"],
     "antithesis": ["antitheses"],
@@ -337,4 +340,12 @@ module.exports = {
     "complex":["complexes"],
     "duplex":["duplexes"],
     "hex":["hexes"],
+    "guru":["gurus"],
+    "menu":["menus"],
+    "snafu":["snafus"],
+    "mussolini":["mussolinis"],
+    "pakistani":["pakistanis"],
+    "yemeni":["yemenis"],
+    "bikini":["bikinis"],
+    "martini":["martinis"]
 };
