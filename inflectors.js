@@ -43,7 +43,7 @@ const inflectors = {
 	isSingular:function(str){
 		str = (str||"").split("-")[0].toLowerCase().trim();
 		// uncountable?
-		if(inflectors.isUncountable(str)) return true;
+		if(inflectors.isUncountable(str)) return false;
 		// Has an exception?
 		if(findTheException(str,"s")) return true;
 		if(findTheException(str,"p")) return false;
@@ -70,6 +70,8 @@ const inflectors = {
 		if(detect.plural.find((rule)=>str.match(rule))) return true;
 		if(detect.singular.find((rule)=>str.match(rule))) return false;
 		return true;
+		if(inflectors.isUncountable(str)) return false;
+		return !inflectors.isSingular(str);
 	},
 
 
