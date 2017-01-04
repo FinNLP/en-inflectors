@@ -81,6 +81,7 @@ const inflectors = {
 	 * @return {Boolean}     result
 	**/
 	isUncountable:(str) => uncountableWords.indexOf(str) > -1,
+	isCountable:(str) => uncountableWords.indexOf(str) === -1,
 
 	/**
 	 * Singularize the input
