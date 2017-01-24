@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexcorvi/en-inflectors.git"
+    "url": "git+https://github.com/finnlp/en-inflectors.git"
   },
   "author": "Alex Corvi <alex@arrayy.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alexcorvi/en-inflectors/issues"
+    "url": "https://github.com/finnlp/en-inflectors/issues"
   },
-  "homepage": "https://github.com/alexcorvi/en-inflector#readme"
+  "homepage": "https://github.com/finnlp/en-inflectors#readme"
 }
