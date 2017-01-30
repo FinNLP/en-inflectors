@@ -46,12 +46,12 @@ inflectors.isCountable("steam");
 
 ```javascript
 const inflectors = require("en-inflectors");
-inflectors.pluralize("mouse");
-// > mice
-inflectors.pluralize("goose");
-// > geese
-inflectors.pluralize("river");
-// > rivers
+inflectors.singularize("mice");
+// > mouse
+inflectors.singularize("geese");
+// > goose
+inflectors.singularize("rivers");
+// > river
 ```
 
 ## Singular to plural transformation
@@ -73,13 +73,15 @@ inflectors.pluralize("wharf");
 
 ## Verb conjugation
 
+Verb conjugation can take a verb (in any tense) and convert it into the required tense.
+
 ```javascript
 const inflectors = require("en-inflectors");
 inflectors.conjugate("playing","VBP");
 // > play
 inflectors.conjugate("playing","VBZ");
 // plays
-inflectors.conjugate("transcribes","VBP");
+inflectors.conjugate("transcribes","VBD");
 // transcribed
 inflectors.conjugate("goes","VBN");
 // gone
@@ -111,8 +113,8 @@ inflectors.gerund("went");
 // going
 ```
 
-
-> Note: for better, more accurate results, pass the verb in it's infinitive form (`go` instead of `goes`). although this library has been written to be agnostic about the form of the inputs, but the test results has proven that it's quite hard to achieve that with full accuracy.
+> __Note__
+> For better, more accurate results, pass the verb in it's infinitive form (`go` instead of `goes`). although this library has been written to be agnostic about the form of the inputs, but the test results has proven that it's quite hard to achieve that with full accuracy.
 
 
 ## Additional functionalities
