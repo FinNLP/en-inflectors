@@ -2,7 +2,8 @@
   "name": "en-inflectors",
   "version": "1.0.4",
   "description": "",
-  "main": "inflectors.js",
+  "main": "./dist/index.js",
+  "types":"./dist/index.d.ts",
   "dependencies": {
     "en-stemmer": "^1.0.0"
   },

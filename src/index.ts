@@ -35,4 +35,4 @@ class Inflector {
 	public nonCountables = nonCountables;
 }
 
-export default Inflector;
+export {Inflector};
