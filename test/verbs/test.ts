@@ -1,4 +1,4 @@
-const Inflector = require("../../dist/index.js").Inflector;
+const Inflector = require("../../dist/index.js").Inflectors;
 const assert = require("assert");
 const verbsList = require("./verbs.json");
 function testConjugations(entry,expected){

@@ -1,4 +1,4 @@
-const Inflector = require("../../dist/index.js").Inflector;
+const Inflector = require("../../dist/index.js").Inflectors;
 const assert = require("assert");
 
 describe('ADJECTIVES', function () {
