@@ -1,10 +1,10 @@
-const syllablesNum = (str:string) => str.split(/[^aeiouy]*[aeiouy]+[^aeiouy]*/).length;
+const syllablesNum = (str:string) => str.split(/[aiouy]+e*|e(?!d$|ly).|[td]ed|le$/).length;
 
 export default [
 
 	// delicious => more delicious
 	{
-		test: 	(str:string) => syllablesNum(str) > 3,
+		test: 	(str:string) => syllablesNum(str) > 3 && !(syllablesNum(str)<5 && /y$/.test(str)),
 		comp: 	(str:string) => "more " + str,
 		supr: 	(str:string) => "most " + str
 	},
@@ -25,7 +25,7 @@ export default [
 
 	// big => bigger
 	{
-		test: 	(str:string) => /[^aeiouy][aeiouy][^aeiouy]$/.test(str),
+		test: 	(str:string) => /[^aeiouy][aeiouy][^rwaeiouy]$/.test(str),
 		comp: 	(str:string) => str.replace(/([^aeiouy])$/,"$1$1er"),
 		supr: 	(str:string) => str.replace(/([^aeiouy])$/,"$1$1est"),
 	},
@@ -40,8 +40,8 @@ export default [
 	// handsome => handsomer
 	{
 		test: 	(str:string) => /e$/.test(str),
-		comp: 	(str:string) => str.replace(/y$/,"er"),
-		supr: 	(str:string) => str.replace(/y$/,"est"),
+		comp: 	(str:string) => str.replace(/e$/,"er"),
+		supr: 	(str:string) => str.replace(/e$/,"est"),
 	},
 
 	// all other cases
