@@ -6,12 +6,12 @@ import * as countableDetection from "./noun/detect_countable";
 import * as verbsList from "./verb/solve_lookup";
 import nonCountables from "./noun/list_uncountable";
 
-class Inflector {
+class Inflectors {
 	
 	word: string;
 
 	constructor(word: string) {
-		this.word = word;
+		this.word = (word||"").toLowerCase();
 	}
 
 	public comparative = ():string => adjective.comparative(this.word);
@@ -30,9 +30,7 @@ class Inflector {
 	public isPlural = ():Boolean => noundDetection.isPlural(this.word);
 	public isCountable = ():Boolean => countableDetection.isCountable(this.word);
 	public isNotCountable = ():Boolean => countableDetection.isNotCountable(this.word);
-
-	public infinitives = verbsList.VBP;
-	public nonCountables = nonCountables;
 }
 
-export {Inflector};
+const infinitives = verbsList.VBP;
+export {Inflectors, infinitives, nonCountables};
