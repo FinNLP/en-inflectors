@@ -1,6 +1,5 @@
-module.exports.singular = [
-	/[^aehilnts]$/, // <= English plurals can not have those endings: bcdfgjkmruopquvxzw
-	// Letter S
+const singularPatterns = [
+	/[bcdfgjkmruopquvxzw]$/,
 	/ss$/,
 	/sis$/,
 	/thos$/,
@@ -10,8 +9,6 @@ module.exports.singular = [
 	/us$/,
 	/(n|r)is$/,
 	/tmas$/,
-
-	// letter A
 	/[abefgjklpqywxyz]a$/,
 	/[^i]ca$/,
 	/[^n]da$/,
@@ -29,22 +26,18 @@ module.exports.singular = [
 	/[^aip]ta$/,
 	/[^rmpe][a-z]ta$/,
 	/[^gart][a-z][a-z]ta$/,
-	// Letter E
 	/(a)e$/,
 	/people$/,
 	/[^t][^t][^o][^i][^a]e$/,
-	// Letter H
 	/[^i][^t]h$/,
-	// Letter I
 	/[uacgzheimnot][a-z]i$/,
 	/[^atvliopcbnmgfds][a-z]*i$/,
 	/[a-z][^ertiopasl][a-z]+[a-z]i$/,
-	// Letter L
 	/[^e]l$/,
-	// Letter N
 	/[^e]n$/,
 ];
-module.exports.plural = [
+
+const pluralPatterns = [
 	/men$/,
 	/sortia$/,
 	/^media$/,
@@ -68,3 +61,5 @@ module.exports.plural = [
 	/[ea]s$/,
 	/[^aouie]s$/,
 ];
+
+export {singularPatterns,pluralPatterns};

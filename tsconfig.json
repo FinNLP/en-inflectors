@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir": "./dist/",
+        "declaration":true
+    },
+    "files": [
+        "./src/index.ts"
+    ],
+    "exclude": [
+        "./node_modules/*"
+    ]
+}
