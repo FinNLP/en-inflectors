@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "dependencies": {
-    "en-stemmer": "^1.0.0"
+    "en-stemmer": "^1.0.2"
   },
   "devDependencies": {},
   "scripts": {
