@@ -38,7 +38,7 @@ export default function (verb:string):string{
 		if(f) return f[0];
 	}
 	// finally defaults to porter stemmer
-	return (list.VBP[porter(verb)]||[""])[0];
+	return (list.VBP[porter.stemmer(verb)]||[""])[0];
 }
 
 function end(str:string,substring:string):Boolean {
