@@ -1,4 +1,5 @@
 import porter = require("en-stemmer");
+
 import * as list from "./solve_lookup";
 
 export default function (verb:string):string{
