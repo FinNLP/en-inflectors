@@ -18,10 +18,10 @@ class Inflectors {
 	public superlative = ():string => adjective.superlative(this.word);
 
 	public conjugate = (to:string):string => verb.conjugate(this.word,to);	
-	public toPresnet = ():string => verb.toPresent(this.word);
+	public toPresent = ():string => verb.toPresent(this.word);
 	public toPast = ():string => verb.toPast(this.word);
 	public toPastParticiple = ():string => verb.toPastParticiple(this.word);
-	public toPrenseS = ():string => verb.toPresentS(this.word);
+	public toPresentS = ():string => verb.toPresentS(this.word);
 	public toGerund = ():string => verb.toGerund(this.word);
 
 	public toPlural = ():string => noun.toPlural(this.word);
