@@ -9,8 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "test": "mocha",
+    "build": "tsc",
+    "prepublish":"mocha && tsc"
   },
   "repository": {
     "type": "git",
