@@ -1,4 +1,6 @@
-{
+const list:{
+	[key:string]:string[]
+} = {
 	"sublet":["sublet","sublet","sublet","sublets","subletting"],
 	"sunburn":["sunburn","sunburnt","sunburnt","sunburns","sunburning"],
 	"telecast":["telecast","telecast","telecast","telecasts","telecasting"],
@@ -89,4 +91,6 @@
 	"geo-unbending":["geo-unbend","geo-unbent","geo-unbent","geo-unbends","geo-unbending"],
 	"deimitated":["deimitate","deimitated","deimitated","deimitates","deimitating"],
 	"co-immolate":["co-immolate","co-immolated","co-immolated","co-immolates","co-immolating"]
-}
+};
+
+export default list;

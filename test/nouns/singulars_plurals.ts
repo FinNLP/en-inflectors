@@ -1,4 +1,4 @@
-[
+export default [
     ["bus","buses"],
     ["wish","wishes"],
     ["pitch","pitches"],

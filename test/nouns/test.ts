@@ -1,11 +1,18 @@
-const Inflector = require("../../dist/index.js").Inflectors;
+/// <reference path="../../node_modules/@types/node/index.d.ts"/>
+/// <reference path="../../node_modules/@types/mocha/index.d.ts"/>
 const assert = require("assert");
+
+
+import {Inflector} from "../../src/index";
+import singulars from "./singulars";
+import plurals from "./plurals";
+import singularsAndPluralsList from "./singulars_plurals";
+
 
 describe('NOUNS', function () {
 
-	const singulars = require("./singulars.json");
 	describe('test against huge list of common singulars', function () {
-		singulars.forEach((item)=>{
+		(singulars as any).forEach((item:any)=>{
 			it('test item: '+item+' is not plural', function () {
 				assert.equal(new Inflector(item).isPlural(),false);
 			});
@@ -15,10 +22,12 @@ describe('NOUNS', function () {
 		});
 	});
 
+	/*
+		this is something
+	*/
 
-	const plurals = require("./plurals.json");
 	describe('test against huge list of common plurals', function () {
-		plurals.forEach((item)=>{
+		(plurals as any).forEach((item:any)=>{
 			it('test item: '+item+' is plural', function () {
 				assert.equal(new Inflector(item).isPlural(),true);
 			});
@@ -30,11 +39,10 @@ describe('NOUNS', function () {
 
 
 	describe('test against comparative list of singulars and plurals', function () {
-		const singularsAndPluralsList = require("./singulars_plurals.json");
 		describe('booleans', function () {
 			
 			describe('isSingular', function () {
-				singularsAndPluralsList.forEach((arr)=>{
+				(singularsAndPluralsList as any).forEach((arr:any)=>{
 					it('isSingular: '+arr[0], function () {
 						assert.equal(new Inflector(arr[0]).isSingular(),true);
 					});

@@ -1,4 +1,4 @@
-[
+export default [
     ["angry","angrier","angriest"],
     ["bad","worse","worst"],
     ["big","bigger","biggest"],
