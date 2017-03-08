@@ -15,7 +15,7 @@ export const comparative = function(input:string):string {
 		if(!rules[i].test(input)) continue;
 		else return rules[i].comp(input);
 	}
-}
+};
 
 
 /**
@@ -31,4 +31,4 @@ export const superlative = function(input:string):string {
 		if(!rules[i].test(input)) continue;
 		else return rules[i].supr(input);
 	}
-}
+};
