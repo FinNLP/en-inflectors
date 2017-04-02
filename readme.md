@@ -1,6 +1,11 @@
 # English Inflectors Library
 For noun (plural to singular and singular to plural), verb (gerund, present & past) and adjective (comparative, superlative) transformations.
 
+![npm](https://img.shields.io/npm/dm/en-inflectors.svg)
+![npm](https://img.shields.io/npm/v/en-inflectors.svg)
+![license](https://img.shields.io/github/license/FinNLP/en-inflectors.svg)
+![David](https://img.shields.io/david/FinNLP/en-inflectors.svg)
+
 ## Demo
 Here's a quick demo: [RunKit](https://runkit.com/alexcorvi/58e0ccbae24d0400135491d8)
 
