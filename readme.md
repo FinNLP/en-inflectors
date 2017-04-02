@@ -1,6 +1,8 @@
 # English Inflectors Library
-For noun (plural to singular and singular to plural) and verb (gerund, present & past) transformations.
+For noun (plural to singular and singular to plural), verb (gerund, present & past) and adjective (comparative, superlative) transformations.
 
+## Demo
+Here's a quick demo: [RunKit](https://runkit.com/alexcorvi/58e0ccbae24d0400135491d8)
 
 ## Installation
 
