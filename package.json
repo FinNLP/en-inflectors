@@ -1,7 +1,7 @@
 {
   "name": "en-inflectors",
   "version": "1.0.10",
-  "description": "",
+  "description": "English Inflectors Library For noun (plural to singular and singular to plural), verb (gerund, present & past) and adjective (comparative, superlative) transformations",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "dependencies": {
