@@ -21,13 +21,11 @@ npm install en-inflectors --save
 *  **Import the library**
 ```javascript
 // javascript
-const inflectors = require("en-inflectors");
-const Inflectors = inflectors .Inflectors
+const Inflectors = require("en-inflectors").Inflectors;
 ```
 ```typescript
 // typescript
-import inflectors = require("en-inflectors");
-const Inflectors = inflectors .Inflectors
+import { Inflectors } from "en-inflectors";
 ```
 
 * **Instantiate the class**
