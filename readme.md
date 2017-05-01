@@ -58,7 +58,7 @@ new Inflectors("die").toGerund(); // dying
 
 * **Noun Inflection**
 ```javascript
-const instanceA = new Inflectors("matrix");
+const instanceA = new Inflectors("bus");
 const instanceB = new Inflectors("ellipses");
 const instanceC = new Inflectors("money");
 
