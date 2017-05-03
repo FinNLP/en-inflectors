@@ -218,7 +218,7 @@ const singular2plural =<NounConversionObject>{
 	"nucleus": 					["nuclei"],
 	"oaf": 						["oafs"], 
 	"oasis": 					["oases"],
-	"octopus": 					["octopi","octopuses","octopodes"],
+	"octopus": 					["octopuses","octopodes","octopi"],
 	"opus": 					["opera","operas"],
 	"ornis": 					["ornithes"],
 	"ovum": 					["ova"],
