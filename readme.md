@@ -21,13 +21,11 @@ npm install en-inflectors --save
 *  **Import the library**
 ```javascript
 // javascript
-const inflectors = require("en-inflectors");
-const Inflectors = inflectors .Inflectors
+const Inflectors = require("en-inflectors").Inflectors;
 ```
 ```typescript
 // typescript
-import inflectors = require("en-inflectors");
-const Inflectors = inflectors .Inflectors
+import { Inflectors } from "en-inflectors";
 ```
 
 * **Instantiate the class**
@@ -60,7 +58,7 @@ new Inflectors("die").toGerund(); // dying
 
 * **Noun Inflection**
 ```javascript
-const instanceA = new Inflectors("matrix");
+const instanceA = new Inflectors("bus");
 const instanceB = new Inflectors("ellipses");
 const instanceC = new Inflectors("money");
 
