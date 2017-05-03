@@ -2,7 +2,7 @@ export interface NounConversionObject {
 	[key:string]:Array<string>
 }
 
-const singular2plural =<NounConversionObject>{
+const singular2plural = <NounConversionObject>{
 	"abacus": 					["abacuses"],
 	"abyss": 					["abysses"],
 	"addendum": 				["addenda"],
