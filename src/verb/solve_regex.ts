@@ -111,6 +111,7 @@ function solve (input:string,to:string):string{
 		let rule = rules[i];
 		if(rule.test.test(input)) return rule.transform(input,to);
 	}
+	return "";
 }
 
 export {solve};
