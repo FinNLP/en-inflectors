@@ -112,7 +112,7 @@ instanceC.toPlural(); // money (no change)
 
 * **Verb conjugation**
 	1. Dictionary lookup (known irregularities + 4000 common verbs)
-	2. If the passed verb is identified as infinitive then applies regular expression transformations that are based on word endings, vowels and consonant phonetics.
+	2. If the passed verb is identified as infinitive, it then applies regular expression transformations that are based on word endings, vowels and consonant phonetics.
 	3. Tries to trim character from the beginning of the verb, thus solving prefixes (e.g. undergoes, overthrown)
 	4. Tries to stem the word and get the infinitive form, then apply regular expression transformations.
 	5. Applies regular expressions.
@@ -120,15 +120,15 @@ instanceC.toPlural(); // money (no change)
 
 ## How accurate is it?
 
-First of all, unless you have a dictionary of all the words and verbs there are in the English you can't really write a regular expression or an algorithm and expect to have a 100% success rate. English has been adopting words form a lot of different languages (French, Greek and Latin for example) and each one these languages has it's own rules of pluralization and singularization let alone verb conjugation.
+First of all, unless you have a dictionary of all the words and verbs that exist in English, you can't really write a regular expression or an algorithm and expect to have a 100% success rate. English has been adopting words from a lot of different languages (French, Greek and Latin for example), and each one of these languages has its own rules of pluralization and singularization, let alone verb conjugation.
 
-Even with dictionaries you'll have the problem of complex and made up words like `maskedlocation`, and you might have to add dictionaries for specialties (like medicine which does actually have it's own dictionary). 
+Even with dictionaries you'll have the problem of complex and made up words like `maskedlocation`, and you might have to add dictionaries for specialties (like medicine which does actually have its own dictionary). 
 
 However, I think what you'll find in this library is what can be achieved with the least amount of compromise.
 
 I've used a set of rules (for detection/transformation) in combination with an exceptions list.
 
-However, testing the library was more challenging than what I was anticipating. If you have any case inaccuracy or false positives **please** submit an issue.
+However, testing the library was more challenging than anticipated. If you have any case inaccuracy or false positives **please** submit an issue.
 
 And of course, You can clone this repository, install `mocha` and test it for yourself, and you'll see how it passes the **9900** tests successfully.
 
