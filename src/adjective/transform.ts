@@ -1,5 +1,5 @@
 import rules from "./regexp_rules";
-import {irregulars as irregulars} from "./list_irregulars";
+import { irregulars as irregulars } from "./list_irregulars";
 
 
 /**
@@ -9,10 +9,10 @@ import {irregulars as irregulars} from "./list_irregulars";
  * 
 **/
 
-export const comparative = function(input:string):string {
-	if(irregulars[input]) return irregulars[input][0];
+export const comparative = function (input: string): string {
+	if (irregulars[input]) return irregulars[input][0];
 	for (var i = 0; i < rules.length; i++) {
-		if(!rules[i].test(input)) continue;
+		if (!rules[i].test(input)) continue;
 		else return rules[i].comp(input);
 	}
 	return ""
@@ -26,10 +26,10 @@ export const comparative = function(input:string):string {
  * 
 **/
 
-export const superlative = function(input:string):string {
-	if(irregulars[input]) return irregulars[input][1];
+export const superlative = function (input: string): string {
+	if (irregulars[input]) return irregulars[input][1];
 	for (var i = 0; i < rules.length; i++) {
-		if(!rules[i].test(input)) continue;
+		if (!rules[i].test(input)) continue;
 		else return rules[i].supr(input);
 	}
 	return ""
