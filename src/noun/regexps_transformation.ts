@@ -1,150 +1,150 @@
 const toPlural = [
 	// appendix, spadix, radix
 	{
-		regexp:/dix$/,														
+		regexp:/dix$/,
 		replacement:'dices'
 	},
 	// pooch
 	{
-		regexp:/ooch$/,														
+		regexp:/ooch$/,
 		replacement:'$1chs'
 	},
 	// man, policeman, fireman, 
 	{
-		regexp:/(m)an$/,														
+		regexp:/(m)an$/,
 		replacement:'$1en'
 	},
 	// person
 	{
-		regexp:/(pe)rson$/,													
+		regexp:/(pe)rson$/,
 		replacement:'$1ople'
 	},
 	// child
 	{
-		regexp:/(child)$/,													
+		regexp:/(child)$/,
 		replacement:'$1ren'
 	},
 	// ox
 	{
-		regexp:/^(ox)$/,														
+		regexp:/^(ox)$/,
 		replacement:'$1en'
 	},
 	// axis
 	{
-		regexp:/(ax|test)is$/,												
+		regexp:/(ax|test)is$/,
 		replacement:'$1es'
 	},
 	// fungus, locus, nucleus, radius, 
 	{
-		regexp:/(op|ir|umn|am|ll|ct|oc|ng|le|di|ul|ab|rmin|or|in)us$/,		
+		regexp:/(op|ir|umn|am|ll|ct|oc|ng|le|di|ul|ab|rmin|or|in)us$/,
 		replacement:'$1i'
 	},
 	// status
 	{
-		regexp:/(alias|status)$/,												
+		regexp:/(alias|status)$/,
 		replacement:'$1es'
 	},
 	// Syllabus thrombus
 	{
-		regexp:/(bu)s$/,														
+		regexp:/(bu)s$/,
 		replacement:'$1ses'
 	},
 	// buffalo, cargo, echo, embargo
 	{
-		regexp:/(fal|tat|ch|rg|ott|mat|ped|et|can|er|uit|her|ad)o$/,			
+		regexp:/(fal|tat|ch|rg|ott|mat|ped|et|can|er|uit|her|ad)o$/,
 		replacement:'$1oes'
 	},
 	// bacterium, curriculum, datum, erratum,
 	{
-		regexp:/([aeiouy]ri|dat|cul|rat|nasi|edi|rand|ov)um$/,				
+		regexp:/([aeiouy]ri|dat|cul|rat|nasi|edi|rand|ov)um$/,
 		replacement:'$1a'
 	},
 	// bacterium, curriculum, datum, erratum,
 	{
-		regexp:/([aoeuiy]|er)ion$/,											
+		regexp:/([aoeuiy]|er)ion$/,
 		replacement:'$1ia'
 	},
 	// sherion
 	{
-		regexp:/(mat|erio|omen|hedr)on$/,										
+		regexp:/(mat|erio|omen|hedr)on$/,
 		replacement:'$1a'
 	},
 	// analysis, basis, crisis, ellipsis, hypothesis
 	{
-		regexp:/(is|ps|hes|as|ys|os|ax)is$/,									
+		regexp:/(is|ps|hes|as|ys|os|ax)is$/,
 		replacement:'$1es'
 	},
 	// calf elf half knife
 	{
-		regexp:/(?:([^f])fe|([lrf])f)$/,										
+		regexp:/(?:([^f])fe|([lrf])f)$/,
 		replacement:'$1$2ves'
 	},
 	// criterion
 	{
-		regexp:/(hive)$/,														
+		regexp:/(hive)$/,
 		replacement:'$1s'
 	},
 	// ally army baby beauty
 	{
-		regexp:/([^aeiouy]|qu)y$/,											
+		regexp:/([^aeiouy]|qu)y$/,
 		replacement:'$1ies'
 	},
 	// alley attorney essay boy delay
 	{
-		regexp:/([aeiouy]y)$/,												
+		regexp:/([aeiouy]y)$/,
 		replacement:'$1s'
 	},
 	// matrix vertex index
 	{
-		regexp:/(matr|vert|ind)(ix|ex)$/,										
+		regexp:/(matr|vert|ind)(ix|ex)$/,
 		replacement:'$1ices'
 	},
 	// louse mouse booklouse 
 	{
-		regexp:/([m|l])ouse$/,												
+		regexp:/([m|l])ouse$/,
 		replacement:'$1ice'
 	},
 	// alga, alumna, antenna, larva
 	{
-		regexp:/(alg|lumn|tenn|arv|ebul|pup|rteb|vit)a$/,						
+		regexp:/(alg|lumn|tenn|arv|ebul|pup|rteb|vit)a$/,
 		replacement:'$1ae'
 	},
 	// buzz fizz klutz quiz topaz waltz
 	{
-		regexp:/(uz|qui|ut)(z)$/,												
+		regexp:/(uz|qui|ut)(z)$/,
 		replacement:'$1$2zes'
 	},
 	// waltz
 	{
-		regexp:/(opa|alt)(z)$/,												
+		regexp:/(opa|alt)(z)$/,
 		replacement:'$1zes'
 	},
 	// foot tooth
 	{
-		regexp:/^(f|t|g)oo([thse]{1,2})$/,									
+		regexp:/^(f|t|g)oo([thse]{1,2})$/,
 		replacement:'$1ee$2'
 	},
 	// plateau
 	{
-		regexp:/([^aeiouy])eau$/,												
+		regexp:/([^aeiouy])eau$/,
 		replacement:'$1eaux'
 	},
 	// loaf
 	{
-		regexp:/([aeiouy])f$/,												
+		regexp:/([aeiouy])f$/,
 		replacement:'$1ves'
 	},
 	// arch atlas ax bash bench
 	{
-		regexp:/(x|ch|ss|sh|s)$/,												
+		regexp:/(x|ch|ss|sh|s)$/,
 		replacement:'$1es'
 	},
 	{
-		regexp:/o$/,															
+		regexp:/o$/,
 		replacement:'oes'
 	},
 	{
-		regexp:/$/,															
+		regexp:/$/,
 		replacement:'s'
 	},
 ];
@@ -152,37 +152,37 @@ const toPlural = [
 const toSingular = [
 	// babies cities universities victories
 	{
-		regexp:/([^aeiouy]|qu)ies$/,													
+		regexp:/([^aeiouy]|qu)ies$/,
 		replacement:'$1y'
 	},
 	// buffaloes, cargoes, echoes, embargoes
 	{
-		regexp:/(falo|tato|cho|rgo|otto|mato|pedo|eto|cano|ero|uito|hero)es$/,		
+		regexp:/(falo|tato|cho|rgo|otto|mato|pedo|eto|cano|ero|uito|hero)es$/,
 		replacement:'$1'
 	},
 	// axes , paralyses
 	{
-		regexp:/(lys|xis|bas|ris|ips|thes|uros|oas|ys|ops)es$/,						
+		regexp:/(lys|xis|bas|ris|ips|thes|uros|oas|ys|ops)es$/,
 		replacement:'$1is'
 	},
 	// buzzes fizzes quizzes
 	{
-		regexp:/(z)zes$/,																
+		regexp:/(z)zes$/,
 		replacement:'$1'
 	},
 	// algae, alumnae, antennae, larvae
 	{
-		regexp:/(alg|lumn|tenn|arv|ebul|pup|rteb|vit)ae$/,							
+		regexp:/(alg|lumn|tenn|arv|ebul|pup|rteb|vit)ae$/,
 		replacement:'$1a'
 	},
 	// bacteria, curricula, data, errata,
 	{
-		regexp:/(cteri|at|ul|at|asi|di|nd|ov|ri)a$/,									
+		regexp:/(cteri|at|ul|at|asi|di|nd|ov|ri)a$/,
 		replacement:'$1um'
 	},
 	// matrices indices
 	{
-		regexp:/(vert|ind)ices$/,														
+		regexp:/(vert|ind)ices$/,
 		replacement:'$1ex'
 	},
 	// analyses synopses prognoses
@@ -192,137 +192,137 @@ const toSingular = [
 	},
 	// archive hives chives
 	{
-		regexp:/(hive)s$/,															
+		regexp:/(hive)s$/,
 		replacement:'$1'
 	},
 	// adjectives creatives causatives
 	{
-		regexp:/(tive)s$/,															
+		regexp:/(tive)s$/,
 		replacement:'$1'
 	},
 	// curves
 	{
-		regexp:/(curve)s$/,															
+		regexp:/(curve)s$/,
 		replacement:'$1'
 	},
 	// attorneys
 	{
-		regexp:/([aeiou]y)s$/,														
+		regexp:/([aeiou]y)s$/,
 		replacement:'$1'
 	},
 	// louse mouse booklouse 
 	{
-		regexp:/([m|l])ice$/,															
+		regexp:/([m|l])ice$/,
 		replacement:'$1ouse'
 	},
 	// man
 	{
-		regexp:/(m)en$/,																
+		regexp:/(m)en$/,
 		replacement:'$1an'
 	},
 	// series
 	{
-		regexp:/(s)eries$/,															
+		regexp:/(s)eries$/,
 		replacement:'$1eries'
 	},
 	// movies
 	{
-		regexp:/(m)ovies$/,															
+		regexp:/(m)ovies$/,
 		replacement:'$1ovie'
 	},
 	// buses
 	{
-		regexp:/(bus)es$/,															
+		regexp:/(bus)es$/,
 		replacement:'$1'
 	},
 	// shoes
 	{
-		regexp:/(shoe)s$/,															
+		regexp:/(shoe)s$/,
 		replacement:'$1'
 	},
 	//
 	{
-		regexp:/(o)es$/,																
+		regexp:/(o)es$/,
 		replacement:'$1'
 	},
 	// crisis
 	{
-		regexp:/^(cris|ax|test)es$/,													
+		regexp:/^(cris|ax|test)es$/,
 		replacement:'$1is'
 	},
 	// octopi
 	{
-		regexp:/(octop|vir)i$/,														
+		regexp:/(octop|vir)i$/,
 		replacement:'$1us'
 	},
 	// aliases
 	{
-		regexp:/(alias|status)es$/,													
+		regexp:/(alias|status)es$/,
 		replacement:'$1'
 	},
 	// oxen
 	{
-		regexp:/^(ox)en$/,															
+		regexp:/^(ox)en$/,
 		replacement:'$1'
 	},
 	// matrices
 	{
-		regexp:/(matr)ices$/,															
+		regexp:/(matr)ices$/,
 		replacement:'$1ix'
 	},
 	// feet
 	{
-		regexp:/([a-z]{1})ee([a-z]{1,2})$/,											
+		regexp:/([a-z]{1})ee([a-z]{1,2})$/,
 		replacement:'$1oo$2'
 	},
 	// fungi
 	{
-		regexp:/([^aeiouy][aeiouy][^aeiouy]{1,2}e*)i|i$/,								
+		regexp:/([^aeiouy][aeiouy][^aeiouy]{1,2}e*)i|i$/,
 		replacement:'$1us'
 	},
 	// plateaux
 	{
-		regexp:/([^aeiouy])eaux$/g,													
+		regexp:/([^aeiouy])eaux$/g,
 		replacement:'$1eau'
 	},
 	//
 	{
-		regexp:/([aeiouy]us)es$/,														
+		regexp:/([aeiouy]us)es$/,
 		replacement:'$1e'
 	},
 	//
 	{
-		regexp:/([^l][oa]s)es$/,														
+		regexp:/([^l][oa]s)es$/,
 		replacement:'$1is'
 	},
 	// loaves
 	{
-		regexp:/([aeiouy]{2})ves$/,													
+		regexp:/([aeiouy]{2})ves$/,
 		replacement:'$1f'
 	},
 	// lives
 	{
-		regexp:/([aeiouy])ves$/,														
+		regexp:/([aeiouy])ves$/,
 		replacement:'$1fe'
 	},
 	//
 	{
-		regexp:/(h\w{2})ves$/,														
+		regexp:/(h\w{2})ves$/,
 		replacement:'$1f'
 	},
 	// wharves
 	{
-		regexp:/(el|car|cal|war)ves$/,												
+		regexp:/(el|car|cal|war)ves$/,
 		replacement:'$1f'
 	},
 	//
 	{
-		regexp:/([xsz])es$/,															
+		regexp:/([xsz])es$/,
 		replacement:'$1'
 	},
 	// itches twitches arches
 	{
-		regexp:/(x|ch|sh|ss)es$/,														
+		regexp:/(x|ch|sh|ss)es$/,
 		replacement:'$1'
 	},
 	{
