@@ -7,7 +7,7 @@ For noun (plural to singular and singular to plural), verb (gerund, present & pa
 ![David](https://img.shields.io/david/FinNLP/en-inflectors.svg)
 
 ## Demo
-Here's a quick demo: [RunKit](https://runkit.com/alexcorvi/58e0ccbae24d0400135491d8)
+Here's a quick demo: [http://en-inflectors.surge.sh/](http://en-inflectors.surge.sh/)
 
 ## Installation
 
