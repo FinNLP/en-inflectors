@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>en-inflectors Demo</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+		<style>
+			body {
+				padding:12px;
+				margin:0 auto;
+				max-width:600px;
+				background: #E0E0E0;
+				font-family: 'Source Sans Pro', sans-serif;
+			}
+			h1 {
+				color:#424242;
+			}
+			.demo {
+				position: relative;
+				background: #FAFAFA;
+				padding:26px;
+				padding-bottom: 50px;
+				margin-bottom: 33px;
+				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+			}
+			.demo h2 {
+				color:#424242;
+				margin: 0;
+				margin-bottom: 5px;
+				padding-bottom: 5px;
+				border-bottom: 1px solid #E0E0E0;
+				font-size: 17px;
+			}
+			.try {
+				font-size: 12px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: calc(100% - 10px);
+				background: #EEEEEE;
+				box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.25);
+				padding: 5px;
+			}
+			.try a {
+				color:#3F51B5;
+				cursor: pointer;
+			}
+			.input input {
+				margin-top: 25px;
+				padding: 15px 11px;
+				font-size: 13px;
+				border: none;
+				box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.08), -1px 4px 12px rgba(0, 0, 0, 0.15);
+				border-radius: 7px;
+				width: calc(100% - 22px);
+			}
+			.output {
+				margin-top:25px;
+			}
+			.output span {
+				display: inline-block;
+				padding:7px 14px;
+				border:1px solid red;
+				font-size: 13px;
+				margin-right:7px;
+				margin-top:7px;
+				border-radius: 5px;
+			}
+
+			.output span:nth-child(1) {border-color: #673AB7;}
+			.output span:nth-child(2) {border-color: #E91E6A;}
+			.output span:nth-child(3) {border-color: #2296F6;}
+			.output span:nth-child(4) {border-color: #FF9800;}
+			.output span:nth-child(5) {border-color: #009688;}
+		</style>
+	</head>
+	<body>
+		<h1>en-inflectors demo</h1>
+		<div class="demo">
+			<h2>Nouns</h2>
+			<div class="input">
+				<input id="nouns-input" placeholder="write your noun here">
+			</div>
+			<div id="nouns-output" class="output">
+			</div>
+			<div class="try">
+				try:
+					<a onclick="document.getElementById('nouns-input').value=this.innerHTML;">river</a>
+					<a onclick="document.getElementById('nouns-input').value=this.innerHTML;">octopodes</a>
+					<a onclick="document.getElementById('nouns-input').value=this.innerHTML;">silo</a>
+					<a onclick="document.getElementById('nouns-input').value=this.innerHTML;">matrix</a>
+			</div>
+		</div>
+		<div class="demo">
+			<h2>Verbs</h2>
+			<div class="input">
+				<input id="verbs-input" placeholder="write your verb here">
+			</div>
+			<div id="verbs-output" class="output">
+			</div>
+			<div class="try">
+				try:
+					<a onclick="document.getElementById('verbs-input').value=this.innerHTML;">tries</a>
+					<a onclick="document.getElementById('verbs-input').value=this.innerHTML;">dying</a>
+					<a onclick="document.getElementById('verbs-input').value=this.innerHTML;">semi-mind-blowing</a>
+					<a onclick="document.getElementById('verbs-input').value=this.innerHTML;">abode</a>
+			</div>
+		</div>
+		<div class="demo">
+			<h2>Adjectives</h2>
+			<div class="input">
+				<input id="adj-input" placeholder="write your adjective here">
+			</div>
+			<div id="adj-output" class="output">
+			</div>
+			<div class="try">
+				try:
+					<a onclick="document.getElementById('adj-input').value=this.innerHTML;">big</a>
+					<a onclick="document.getElementById('adj-input').value=this.innerHTML;">beautiful</a>
+					<a onclick="document.getElementById('adj-input').value=this.innerHTML;">shameful</a>
+					<a onclick="document.getElementById('adj-input').value=this.innerHTML;">good</a>
+			</div>
+		</div>
+		<p class="footer">
+			<a href="https://github.com/FinNLP/en-inflectors">GitHub</a>
+		</p>
+		<script src="./main.js"></script>
+	</body>
+</html>
