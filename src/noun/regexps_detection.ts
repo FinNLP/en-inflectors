@@ -62,4 +62,4 @@ const pluralPatterns = [
 	/[^aouie]s$/,
 ];
 
-export {singularPatterns,pluralPatterns};
+export { singularPatterns, pluralPatterns };
