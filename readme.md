@@ -45,8 +45,8 @@ instance.superlative(); // biggest
 new Inflectors("rallied").conjugate("VBP"); // rally
 new Inflectors("fly").conjugate("VBD"); // flew
 new Inflectors("throw").conjugate("VBN"); // thrown
-new Inflectors("rally").conjugate("VBS"); // rallies
-new Inflectors("die").conjugate("VBP"); // dying
+new Inflectors("rally").conjugate("VBZ"); // rallies
+new Inflectors("die").conjugate("VBG"); // dying
 
 // or you can use the aliases
 new Inflectors("rallied").toPresent(); // rally
